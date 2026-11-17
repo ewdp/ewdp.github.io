@@ -1,693 +1,523 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Aethel Energy South Africa— Clean Energy Origination. Nationwide.</title>
+<meta name="description" content="Aethel Energy develops clean energy opportunities across commercial and industrial wheeling, behind-the-meter solar PV and BESS, residential energy storage, and international renewable energy markets."/>
+<meta name="theme-color" content="#0A1628"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+<title>Aethel Energy | Energy Development, IPP Strategy & Renewable Energy Solutions</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{
-    --gold:#C8922A;
-    --gold-light:#E8B84B;
-    --gold-pale:#FDF6E7;
-    --navy:#0A1628;
-    --navy-mid:#162340;
-    --white:#FFFFFF;
-    --off-white:#F7F8FA;
-    --grey:#6B7280;
-    --grey-light:#E5E7EB;
-    --text:#1A1A2E;
-    --radius:12px;
-    --shadow:0 4px 24px rgba(10,22,40,.08);
-    --shadow-lg:0 12px 48px rgba(10,22,40,.14);
-    --section-pad: clamp(3.5rem, 7vw, 6.5rem);
-    --container-pad: clamp(1rem, 4vw, 2.5rem);
-  }
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;overflow-x:hidden;width:100%}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-  /* ─── NAV ─────────────────────────────────────────── */
-  nav{
-    position:fixed;top:0;left:0;width:100%;z-index:999;
-    background:rgba(255,255,255,.96);backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--grey-light);
-    transition:box-shadow .3s;
-  }
-  .scrolled{box-shadow:var(--shadow)}
-  .nav-inner{
-    max-width:1280px;
-    width:100%;
-    margin:0 auto;
-    height:68px;
-    padding:0 var(--container-pad);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-  }
-  .nav-logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    flex-shrink:0;
-  }
-  .nav-logo-img{
-    width:36px;
-    height:36px;
-    flex-shrink:0;
-  }
-  .nav-logo-text{
-    font-family:'Montserrat',sans-serif;
-    font-weight:800;
-    font-size:1.05rem;
-    letter-spacing:.04em;
-    color:var(--navy);
-    white-space:nowrap;
-  }
-  .nav-logo-text span{color:var(--gold)}
-  .nav-links{
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    gap:clamp(10px,1.5vw,22px);
-    list-style:none;
-    flex:1;
-    min-width:0;
-  }
-  .nav-links a{
-    font-size:.82rem;
-    font-weight:500;
-    color:var(--navy);
-    text-decoration:none;
-    letter-spacing:.01em;
-    transition:color .2s;
-    padding:8px 0;
-    white-space:nowrap;
-  }
-  .nav-links a:hover{color:var(--gold)}
-  .nav-cta{
-    background:var(--gold);
-    color:#fff;
-    border:none;
-    padding:9px 18px;
-    border-radius:50px;
-    font-family:'Montserrat',sans-serif;
-    font-weight:700;
-    font-size:.75rem;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    cursor:pointer;
-    text-decoration:none;
-    transition:background .2s,transform .15s;
-    min-height:42px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    white-space:nowrap;
-    flex-shrink:0;
-  }
-  .nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
-  .hamburger{
-    display:none;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:5px;
-    cursor:pointer;
-    background:none;
-    border:none;
-    padding:8px;
-    min-height:44px;
-    min-width:44px;
-    flex-shrink:0;
-  }
-  .hamburger span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;transition:.3s}
-  .mobile-menu{
-    display:none;
-    position:fixed;
-    top:68px;
-    left:0;
-    width:100%;
-    max-height:calc(100vh - 68px);
-    overflow-y:auto;
-    background:#fff;
-    border-bottom:1px solid var(--grey-light);
-    padding:12px var(--container-pad) 24px;
-    z-index:998;
-    flex-direction:column;
-    gap:0;
-    box-shadow:var(--shadow);
-  }
-  .mobile-menu.open{display:flex}
-  .mobile-menu a{
-    display:block;
-    width:100%;
-    font-weight:500;
-    color:var(--navy);
-    text-decoration:none;
-    font-size:1rem;
-    padding:15px 4px;
-    border-bottom:1px solid var(--grey-light);
-  }
-  .mobile-menu .nav-cta{
-    display:flex;
-    margin-top:16px;
-    padding:12px 20px;
-    border-bottom:none;
-    width:100%;
-    justify-content:center;
-  }
+:root{
+  --gold:#C8922A;
+  --gold-light:#E8B84B;
+  --gold-pale:#FDF6E7;
+  --navy:#0A1628;
+  --navy-mid:#162340;
+  --white:#fff;
+  --off-white:#F7F8FA;
+  --grey:#6B7280;
+  --grey-light:#E5E7EB;
+  --text:#1A1A2E;
+  --radius:12px;
+  --shadow:0 4px 24px rgba(10,22,40,.08);
+  --shadow-lg:0 12px 48px rgba(10,22,40,.14);
+  --section-pad:clamp(3.5rem,7vw,6.5rem);
+  --container-pad:clamp(1rem,4vw,2.5rem);
+}
 
- /* ─── HERO ─────────────────────────────────────────── */
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;overflow-x:hidden;width:100%}
+a{transition:color .2s}
+.container{max-width:1280px;margin:auto;width:100%}
+section{padding:var(--section-pad) var(--container-pad)}
+.section-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.section-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.2vw,2.8rem);line-height:1.15;color:var(--navy);letter-spacing:-.02em}
+.section-title em{color:var(--gold);font-style:normal}
+.section-sub{font-size:clamp(.9rem,1.1vw,1.05rem);color:var(--grey);line-height:1.7;max-width:650px;margin-top:16px}
+
+/* NAVIGATION */
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:999;
+  background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--grey-light);transition:box-shadow .3s
+}
+.scrolled{box-shadow:var(--shadow)}
+.nav-inner{
+  max-width:1280px;width:100%;margin:auto;height:68px;
+  padding:0 var(--container-pad);display:flex;align-items:center;
+  justify-content:space-between;gap:18px
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav-logo-img{width:36px;height:36px;flex-shrink:0}
+.nav-logo-text{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.04em;color:var(--navy);white-space:nowrap}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:clamp(9px,1.2vw,18px);list-style:none;flex:1}
+.nav-links a{font-size:.77rem;font-weight:600;color:var(--navy);text-decoration:none;white-space:nowrap}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta,.btn-primary{
+  background:var(--gold);color:#fff;border:none;border-radius:50px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;
+  letter-spacing:.05em;text-transform:uppercase;text-decoration:none;
+  cursor:pointer;transition:.2s;display:inline-flex;align-items:center;
+  justify-content:center;min-height:46px;padding:12px 25px;white-space:nowrap
+}
+.nav-cta:hover,.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:10px;cursor:pointer}
+.hamburger span{width:24px;height:2px;background:var(--navy);display:block;border-radius:2px}
+.mobile-menu{
+  display:none;position:fixed;top:68px;left:0;width:100%;
+  max-height:calc(100vh - 68px);overflow-y:auto;background:#fff;
+  border-bottom:1px solid var(--grey-light);padding:12px 20px 24px;
+  z-index:998;flex-direction:column;box-shadow:var(--shadow)
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:14px 4px;border-bottom:1px solid var(--grey-light);text-decoration:none;color:var(--navy);font-weight:600}
+.mobile-menu .nav-cta{margin-top:15px;border:0;color:#fff;justify-content:center}
+
+/* BUTTONS */
+.btn-outline{
+  background:transparent;color:#fff;padding:12px 25px;border-radius:50px;
+  border:2px solid #fff;font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px
+}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+.btn-white{
+  background:#fff;color:var(--gold);padding:14px 30px;border-radius:50px;
+  text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:.82rem;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center
+}
+.btn-white:hover{transform:translateY(-2px)}
+.btn-ghost-white{
+  background:transparent;color:#fff;padding:13px 28px;border-radius:50px;
+  border:2px solid rgba(255,255,255,.6);text-decoration:none;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;
+  text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center
+}
+
+/* HERO */
 .hero{
-  min-height:100vh;
-  background:var(--navy);
-  display:grid;grid-template-columns:1.1fr 0.9fr;
-  align-items:stretch;
-  gap:0;
-  padding-top:68px;
-  position:relative;overflow:hidden;
+  min-height:100vh;background:var(--navy);
+  display:grid;grid-template-columns:1.1fr .9fr;
+  align-items:stretch;padding-top:68px;overflow:hidden
 }
 .hero-content{
-  padding:clamp(2.5rem, 5vw, 5rem) clamp(1.5rem, 4vw, 5rem);
-  position:relative;z-index:2;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  padding:clamp(2.5rem,5vw,5rem) clamp(1.5rem,4vw,5rem);
+  display:flex;flex-direction:column;justify-content:center;z-index:2
+}
+.hero-eyebrow{
+  color:var(--gold-light);font-size:.73rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px
 }
 .hero h1{
   font-family:'Montserrat',sans-serif;font-weight:900;
-  font-size:clamp(2.2rem, 4.5vw, 3.8rem);line-height:1.08;
-  color:#fff;margin-bottom:24px;
-  letter-spacing:-.02em;
+  font-size:clamp(2.3rem,4.5vw,4rem);line-height:1.08;
+  color:#fff;margin-bottom:24px;letter-spacing:-.03em
 }
 .hero h1 em{color:var(--gold);font-style:normal}
-.hero-sub{
-  font-size:clamp(0.95rem, 1.2vw, 1.08rem);line-height:1.7;color:rgba(255,255,255,0.8);
-  max-width:540px;margin-bottom:36px;
-}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn-primary{
-  background:var(--gold);color:#fff;
-  padding:14px 32px;border-radius:50px;
-  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
-  text-decoration:none;border:none;cursor:pointer;
-  transition:background .2s,transform .15s,box-shadow .2s;
-  box-shadow:0 4px 20px rgba(200,146,42,.35);
-  min-height:48px;display:inline-flex;align-items:center;justify-content:center;
-}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,146,42,.45)}
-.btn-outline{
-  background:transparent;color:#fff;
-  padding:13px 30px;border-radius:50px;
-  border:2px solid #fff;
-  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
-  text-decoration:none;cursor:pointer;transition:.2s;
-  min-height:48px;display:inline-flex;align-items:center;justify-content:center;
-}
-.btn-outline:hover{background:#fff;color:var(--navy)}
+.hero-sub{font-size:1rem;line-height:1.8;color:rgba(255,255,255,.78);max-width:570px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-stats{
-  display:grid;grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));gap:24px;margin-top:48px;
-  padding-top:32px;border-top:1px solid rgba(255,255,255,0.15);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  margin-top:48px;padding-top:30px;border-top:1px solid rgba(255,255,255,.15)
 }
-.stat-value{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.5rem, 2.5vw, 1.8rem);color:#fff;line-height:1}
+.stat-value{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.65rem;color:#fff}
 .stat-value span{color:var(--gold)}
-.stat-label{font-size:.78rem;color:rgba(255,255,255,0.7);margin-top:6px;letter-spacing:.03em;text-transform:uppercase;font-weight:500;line-height:1.4}
-.hero-visual{
-  position:relative;height:100%;min-height:500px;overflow:hidden;
-}
-.hero-visual img{
-  width:100%;height:100%;object-fit:cover;
-}
-.hero-visual::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to right,var(--navy) 0%,rgba(0,0,0,0) 30%);
-}
+.stat-label{font-size:.72rem;color:rgba(255,255,255,.65);margin-top:5px;line-height:1.5;text-transform:uppercase}
+.hero-visual{position:relative;min-height:550px;overflow:hidden}
+.hero-visual img{width:100%;height:100%;object-fit:cover}
+.hero-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--navy),transparent 45%)}
 .hero-badge{
-  position:absolute;bottom:40px;left:40px;z-index:3;
-  background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
-  border:1px solid rgba(200,146,42,.2);
-  border-radius:var(--radius);padding:16px 20px;
-  box-shadow:var(--shadow);max-width:calc(100% - 80px);
+  position:absolute;bottom:40px;left:30px;z-index:2;
+  background:rgba(255,255,255,.94);border-radius:12px;padding:18px 22px;
+  box-shadow:var(--shadow);max-width:calc(100% - 60px)
 }
-.hero-badge-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.1rem;color:var(--navy)}
+.hero-badge-title{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--navy)}
 .hero-badge-title span{color:var(--gold)}
-.hero-badge-sub{font-size:.78rem;color:var(--grey);margin-top:3px}
- 
-  /* ─── SECTION UTILITY ─────────────────────────────── */
-  section{padding:var(--section-pad) var(--container-pad)}
-  .container{max-width:1280px;margin:0 auto;width:100%}
-  .section-label{
-    font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--gold);margin-bottom:14px;
-  }
-  .section-title{
-    font-family:'Montserrat',sans-serif;font-weight:800;
-    font-size:clamp(1.8rem, 3.2vw, 2.8rem);line-height:1.15;
-    color:var(--navy);letter-spacing:-.02em;
-  }
-  .section-title em{color:var(--gold);font-style:normal}
-  .section-sub{font-size:clamp(0.9rem, 1.1vw, 1.05rem);color:var(--grey);line-height:1.7;max-width:600px;margin-top:16px}
+.hero-badge-sub{font-size:.77rem;color:var(--grey);margin-top:4px}
 
-  /* ─── PILLARS ─────────────────────────────────────── */
-  .pillars{background:var(--off-white)}
-  .pillars-grid{
-    display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr));gap:32px;margin-top:48px;
-  }
-  .pillar-card{
-    background:#fff;border-radius:20px;overflow:hidden;
-    box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;
-    display:flex;flex-direction:column;
-  }
-  .pillar-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-  .pillar-img{height:220px;overflow:hidden;width:100%}
-  .pillar-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-  .pillar-card:hover .pillar-img img{transform:scale(1.05)}
-  .pillar-body{padding:28px;display:flex;flex-direction:column;flex-grow:1}
-  .pillar-num{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:36px;height:36px;border-radius:50%;
-    background:var(--gold);color:#fff;
-    font-family:'Montserrat',sans-serif;font-weight:800;font-size:.9rem;
-    margin-bottom:16px;
-  }
-  .pillar-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:10px}
-  .pillar-title em{color:var(--gold);font-style:normal}
-  .pillar-text{font-size:.9rem;color:var(--grey);line-height:1.7;flex-grow:1}
-  .pillar-tag{
-    display:inline-block;margin-top:18px;align-self:flex-start;
-    background:var(--gold-pale);color:var(--gold);
-    border-radius:50px;padding:4px 14px;
-    font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  }
+/* PILLARS */
+.pillars{background:var(--off-white)}
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:45px}
+.pillar-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column}
+.pillar-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.pillar-img{height:210px;overflow:hidden}
+.pillar-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pillar-card:hover .pillar-img img{transform:scale(1.05)}
+.pillar-body{padding:27px;display:flex;flex-direction:column;flex-grow:1}
+.pillar-num{width:35px;height:35px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:15px}
+.pillar-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;color:var(--navy);margin-bottom:12px}
+.pillar-title em{color:var(--gold);font-style:normal}
+.pillar-text{font-size:.88rem;color:var(--grey);line-height:1.75;flex-grow:1}
+.pillar-tag{display:inline-block;margin-top:18px;align-self:flex-start;background:var(--gold-pale);color:var(--gold);border-radius:50px;padding:6px 14px;font-size:.7rem;font-weight:700;text-transform:uppercase}
 
-  /* ─── SERVICES ─────────────────────────────────────── */
-  .services-grid{
-    display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap:24px;margin-top:48px;
-  }
-  .service-card{
-    background:#fff;border:1px solid var(--grey-light);border-radius:16px;
-    padding:28px;transition:.3s;
-  }
-  .service-card:hover{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),var(--shadow)}
-  .service-icon{
-    width:48px;height:48px;border-radius:12px;
-    background:var(--gold-pale);display:flex;align-items:center;justify-content:center;
-    margin-bottom:18px;
-  }
-  .service-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .service-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:8px}
-  .service-text{font-size:.875rem;color:var(--grey);line-height:1.65}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:45px}
+.service-card{background:#fff;border:1px solid var(--grey-light);border-radius:16px;padding:27px;transition:.3s}
+.service-card:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.service-icon{width:48px;height:48px;border-radius:12px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;margin-bottom:17px}
+.service-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1rem;color:var(--navy);margin-bottom:10px;line-height:1.5}
+.service-text{font-size:.86rem;color:var(--grey);line-height:1.7}
+.capacity-tag{display:inline-block;background:var(--gold-pale);color:var(--gold);padding:3px 9px;border-radius:30px;font-size:.68rem;font-weight:700;margin-top:12px}
 
-  /* ─── VALUE / SPLIT ──────────────────────────────── */
-  .value-section{background:var(--navy);color:#fff;overflow:hidden;padding:0}
-  .value-inner{
-    display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;
-  }
-  .value-content{padding:var(--section-pad) var(--container-pad)}
-  .value-content .section-label{color:var(--gold-light)}
-  .value-content .section-title{color:#fff}
-  .value-content .section-sub{color:rgba(255,255,255,.65);max-width:none}
-  .value-list{margin-top:36px;display:flex;flex-direction:column;gap:20px}
-  .value-item{display:flex;gap:16px;align-items:flex-start}
-  .value-check{
-    flex-shrink:0;width:26px;height:26px;border-radius:50%;
-    background:rgba(200,146,42,.2);border:1px solid rgba(200,146,42,.4);
-    display:flex;align-items:center;justify-content:center;margin-top:2px;
-  }
-  .value-check svg{width:13px;height:13px;stroke:var(--gold-light);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-  .value-text strong{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff;margin-bottom:3px}
-  .value-text span{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.6}
-  .value-image{position:relative;min-height:380px;overflow:hidden}
-  .value-image img{width:100%;height:100%;object-fit:cover;opacity:.7}
-  .value-image::before{
-    content:'';position:absolute;inset:0;z-index:1;
-    background:linear-gradient(to right,var(--navy) 0%,transparent 40%);
-  }
-  .savings-badge{
-    position:absolute;bottom:40px;right:40px;z-index:2;
-    background:var(--gold);color:#fff;border-radius:16px;
-    padding:20px 24px;text-align:center;
-    box-shadow:0 8px 32px rgba(0,0,0,.3);max-width:calc(100% - 40px);
-  }
-  .savings-amount{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem, 3vw, 2.2rem);line-height:1}
-  .savings-label{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;opacity:.85}
-  .savings-sub{font-size:.72rem;opacity:.7;margin-top:3px}
+/* BTM FEATURE */
+.btm-section{background:var(--navy);color:#fff}
+.btm-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.btm-section .section-title{color:#fff}
+.btm-section .section-sub{color:rgba(255,255,255,.68)}
+.btm-image{height:480px;border-radius:18px;overflow:hidden;position:relative}
+.btm-image img{width:100%;height:100%;object-fit:cover}
+.btm-image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,22,40,.5),transparent)}
+.btm-points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.btm-point{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04);padding:17px;border-radius:12px}
+.btm-point strong{display:block;font-family:'Montserrat',sans-serif;color:var(--gold-light);font-size:.85rem;margin-bottom:7px}
+.btm-point span{font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.7)}
+.btm-note{margin-top:25px;font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6}
 
-  /* ─── REGION ─────────────────────────────────────── */
-  .region{background:var(--off-white)}
-  .region-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px, 5vw, 64px);align-items:center}
-  .region-image{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);height:clamp(280px, 35vw, 420px)}
-  .region-image img{width:100%;height:100%;object-fit:cover}
-  .region-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-  .region-tag{
-    background:#fff;border:1px solid var(--grey-light);
-    border-radius:50px;padding:8px 18px;
-    font-size:.8rem;font-weight:600;color:var(--navy);letter-spacing:.02em;
-  }
+/* VALUE */
+.value-section{background:var(--off-white)}
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.value-image{height:450px;border-radius:18px;overflow:hidden}
+.value-image img{width:100%;height:100%;object-fit:cover}
+.value-list{margin-top:30px;display:flex;flex-direction:column;gap:20px}
+.value-item{display:flex;gap:14px;align-items:flex-start}
+.value-check{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--gold-pale);border:1px solid rgba(200,146,42,.4);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:900}
+.value-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:.9rem;color:var(--navy);margin-bottom:5px}
+.value-text span{font-size:.84rem;color:var(--grey);line-height:1.65}
 
-  /* ─── PROCESS ─────────────────────────────────────── */
-  .process-steps{
-    display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));gap:32px;
-    margin-top:48px;position:relative;
-  }
-  .step{text-align:center;padding:0 8px;position:relative;z-index:1}
-  .step-circle{
-    width:48px;height:48px;border-radius:50%;
-    background:var(--white);border:2px solid var(--gold);
-    display:flex;align-items:center;justify-content:center;
-    margin:0 auto 20px;
-    font-family:'Montserrat',sans-serif;font-weight:800;font-size:.9rem;color:var(--gold);
-    box-shadow:0 0 0 4px var(--gold-pale);
-  }
-  .step-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:8px}
-  .step-text{font-size:.82rem;color:var(--grey);line-height:1.6}
+/* UNITED STATES */
+.us-section{background:#fff}
+.us-banner{
+  background:var(--navy);border-radius:22px;overflow:hidden;
+  display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch;
+  box-shadow:var(--shadow-lg)
+}
+.us-content{padding:clamp(28px,5vw,60px);color:#fff}
+.us-content .section-title{color:#fff}
+.us-content .section-sub{color:rgba(255,255,255,.7)}
+.us-image{min-height:430px;position:relative}
+.us-image img{width:100%;height:100%;object-fit:cover}
+.us-image:after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--navy),transparent 45%)}
+.us-points{display:flex;flex-direction:column;gap:16px;margin:27px 0}
+.us-point{display:flex;gap:13px;align-items:flex-start}
+.us-point-icon{width:28px;height:28px;border-radius:50%;background:rgba(200,146,42,.18);color:var(--gold-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.us-point strong{display:block;font-family:'Montserrat',sans-serif;font-size:.9rem;margin-bottom:4px}
+.us-point span{font-size:.81rem;color:rgba(255,255,255,.65);line-height:1.6}
+.market-label{display:inline-block;border:1px solid rgba(232,184,75,.5);color:var(--gold-light);padding:7px 14px;border-radius:50px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
 
-  /* ─── EWDP ────────────────────────────────────────── */
-  .ewdp-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px, 6vw, 80px);align-items:center}
-  .ewdp-card-wrapper{position:relative}
-  .ewdp-badge{
-    position:absolute;top:-16px;right:-16px;
-    background:var(--gold);color:#fff;border-radius:50px;
-    padding:8px 18px;font-family:'Montserrat',sans-serif;
-    font-weight:700;font-size:.72rem;letter-spacing:.06em;
-    text-transform:uppercase;box-shadow:var(--shadow);z-index:3;
-  }
+/* IPP VISION */
+.vision-section{background:var(--off-white)}
+.vision-heading{text-align:center;max-width:780px;margin:0 auto}
+.vision-heading .section-sub{margin-left:auto;margin-right:auto}
+.vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:45px}
+.vision-card{background:#fff;border:1px solid var(--grey-light);border-radius:16px;padding:28px}
+.vision-number{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:900;color:var(--gold);margin-bottom:14px}
+.vision-card h3{font-family:'Montserrat',sans-serif;font-size:1.05rem;color:var(--navy);margin-bottom:10px}
+.vision-card p{font-size:.85rem;color:var(--grey);line-height:1.7}
+.vision-footnote{text-align:center;max-width:800px;margin:28px auto 0;font-size:.77rem;color:var(--grey);line-height:1.6}
 
-  /* ─── TESTIMONIAL ─────────────────────────────────── */
-  .testimonial{background:var(--navy);padding:var(--section-pad) var(--container-pad)}
-  .testimonial-inner{max-width:780px;margin:0 auto;text-align:center}
-  .quote-icon{font-size:4rem;color:var(--gold);line-height:1;margin-bottom:16px;opacity:.6}
-  .quote-text{
-    font-family:'Montserrat',sans-serif;font-weight:300;
-    font-size:clamp(1.15rem, 2.2vw, 1.7rem);
-    color:#fff;line-height:1.55;letter-spacing:-.01em;margin-bottom:32px;
-  }
-  .quote-author{font-size:.85rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
-  .quote-role{font-size:.8rem;color:rgba(255,255,255,.45);margin-top:4px}
+/* RESIDENTIAL LAUNCH */
+.residential{background:#fff}
+.residential-banner{
+  background:linear-gradient(125deg,#0A1628,#162C4B);
+  border-radius:22px;padding:clamp(30px,5vw,65px);
+  color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;
+  position:relative;overflow:hidden
+}
+.launch-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(200,146,42,.17);border:1px solid rgba(232,184,75,.5);
+  color:var(--gold-light);padding:9px 15px;border-radius:50px;
+  font-size:.73rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:22px
+}
+.residential h2{font-family:'Montserrat',sans-serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:900;line-height:1.15;margin-bottom:17px}
+.residential h2 em{color:var(--gold-light);font-style:normal}
+.residential p{font-size:.91rem;line-height:1.75;color:rgba(255,255,255,.7)}
+.residential-visual{position:relative;z-index:1}
+.residential-visual img{width:100%;height:300px;object-fit:cover;border-radius:15px}
+.launch-features{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 27px}
+.launch-features span{border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:30px;font-size:.74rem;color:rgba(255,255,255,.8)}
 
-  /* ─── CTA ─────────────────────────────────────────── */
-  .cta-section{background:linear-gradient(135deg,var(--gold) 0%,#A67320 100%)}
-  .cta-inner{max-width:700px;margin:0 auto;text-align:center}
-  .cta-inner h2{
-    font-family:'Montserrat',sans-serif;font-weight:900;
-    font-size:clamp(1.8rem, 3.5vw, 3rem);color:#fff;letter-spacing:-.02em;margin-bottom:16px;
-  }
-  .cta-inner p{font-size:clamp(0.95rem, 1.2vw, 1.05rem);color:rgba(255,255,255,.85);margin-bottom:36px;line-height:1.7}
-  .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-  .btn-white{
-    background:#fff;color:var(--gold);
-    padding:14px 36px;border-radius:50px;
-    font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
-    text-decoration:none;border:none;cursor:pointer;
-    transition:.2s;box-shadow:0 4px 20px rgba(0,0,0,.15);
-    min-height:48px;display:inline-flex;align-items:center;justify-content:center;
-  }
-  .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.2)}
-  .btn-ghost-white{
-    background:transparent;color:#fff;
-    padding:13px 34px;border-radius:50px;border:2px solid rgba(255,255,255,.6);
-    font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;
-    text-decoration:none;transition:.2s;
-    min-height:48px;display:inline-flex;align-items:center;justify-content:center;
-  }
-  .btn-ghost-white:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+/* REGION */
+.region{background:var(--off-white)}
+.region-inner{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.region-image{height:400px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.region-image img{width:100%;height:100%;object-fit:cover}
+.region-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}
+.region-tag{background:#fff;border:1px solid var(--grey-light);border-radius:50px;padding:8px 15px;font-size:.77rem;font-weight:600;color:var(--navy)}
 
-  /* ─── CONTACT ─────────────────────────────────────── */
-  .contact{background:#fff}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px, 5vw, 80px);align-items:start;margin-top:48px}
-  .contact-info{display:flex;flex-direction:column;gap:28px}
-  .contact-item{display:flex;gap:16px;align-items:flex-start}
-  .contact-item-icon{
-    flex-shrink:0;width:44px;height:44px;border-radius:10px;
-    background:var(--gold-pale);display:flex;align-items:center;justify-content:center;
-  }
-  .contact-item-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .contact-item-label{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);margin-bottom:4px}
-  .contact-item-value{font-size:.95rem;color:var(--navy);font-weight:500;word-break:break-word}
-  .contact-form{background:var(--off-white);border-radius:20px;padding:clamp(20px, 4vw, 40px)}
-  .form-group{margin-bottom:20px}
-  .form-label{display:block;font-size:.8rem;font-weight:600;color:var(--navy);letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
-  .form-input,.form-select,.form-textarea{
-    width:100%;padding:13px 16px;border:1.5px solid var(--grey-light);border-radius:10px;
-    font-family:'Inter',sans-serif;font-size:.9rem;color:var(--text);
-    background:#fff;outline:none;transition:border-color .2s;min-height:44px;
-  }
-  .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
-  .form-textarea{resize:vertical;min-height:120px}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .form-submit{
-    width:100%;padding:15px;border:none;border-radius:10px;
-    background:var(--gold);color:#fff;
-    font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;
-    cursor:pointer;transition:.2s;min-height:48px;
-    box-shadow:0 4px 20px rgba(200,146,42,.35);
-  }
-  .form-submit:hover{background:var(--gold-light);transform:translateY(-1px)}
+/* PROCESS */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:45px}
+.step{text-align:center;padding:0 7px}
+.step-circle{width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Montserrat',sans-serif;font-weight:800;color:var(--gold);box-shadow:0 0 0 4px var(--gold-pale)}
+.step-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.9rem;color:var(--navy);margin-bottom:8px}
+.step-text{font-size:.8rem;color:var(--grey);line-height:1.65}
 
-  /* ─── FOOTER ─────────────────────────────────────── */
-  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:clamp(40px, 6vw, 60px) var(--container-pad) 32px}
-  .footer-inner{max-width:1280px;margin:0 auto}
-  .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
-  .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
-  .footer-logo-text{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:.04em}
-  .footer-logo-text span{color:var(--gold)}
-  .footer-tagline{font-size:.85rem;line-height:1.7;max-width:300px}
-  .footer-socials{display:flex;gap:12px;margin-top:24px}
-  .social-link{
-    width:38px;height:38px;border-radius:9px;
-    border:1px solid rgba(255,255,255,.2);
-    display:flex;align-items:center;justify-content:center;
-    transition:.2s;text-decoration:none;
-  }
-  .social-link:hover{border-color:var(--gold);background:rgba(200,146,42,.15)}
-  .social-link svg{width:17px;height:17px;fill:rgba(255,255,255,.7)}
-  .footer-col h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:18px}
-  .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-  .footer-links a{font-size:.85rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;padding:2px 0;display:inline-block}
-  .footer-links a:hover{color:var(--gold)}
-  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px}
-  .footer-bottom p{font-size:.78rem}
-  .footer-bottom-links{display:flex;gap:16px;flex-wrap:wrap}
-  .footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none;font-size:.78rem;transition:color .2s}
-  .footer-bottom a:hover{color:var(--gold)}
+/* EWDP */
+.ewdp-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ewdp-preview{background:var(--navy);border-radius:18px;padding:30px;box-shadow:var(--shadow-lg)}
+.ewdp-preview-title{font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:1rem;margin-bottom:23px}
+.ewdp-metric{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:19px;margin-bottom:13px}
+.ewdp-metric-label{font-size:.68rem;color:var(--gold-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+.ewdp-metric-value{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.7rem;color:#fff}
+.ewdp-small-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ewdp-small-grid .ewdp-metric-value{font-size:1rem}
 
-  /* ─── RESPONSIVE BREAKPOINTS ─────────────────────── */
-  @media(max-width:1024px){
-    .hero{grid-template-columns:1fr;min-height:auto}
-    .hero-visual{display:none}
-    .value-inner{grid-template-columns:1fr}
-    .value-image{display:none}
-    .region-inner{grid-template-columns:1fr}
-    .ewdp-grid{grid-template-columns:1fr}
-    .contact-grid{grid-template-columns:1fr}
-    .footer-top{grid-template-columns:1fr 1fr}
-  }
-  @media(max-width:1050px){
-    .nav-links,
-    nav > .nav-inner > .nav-cta{display:none}
+/* TESTIMONIAL */
+.testimonial{background:var(--navy);padding:var(--section-pad) var(--container-pad)}
+.testimonial-inner{max-width:780px;margin:auto;text-align:center}
+.quote-icon{font-size:4rem;color:var(--gold);line-height:1;margin-bottom:15px}
+.quote-text{font-family:'Montserrat',sans-serif;font-weight:300;font-size:clamp(1.1rem,2.2vw,1.65rem);color:#fff;line-height:1.55;margin-bottom:25px}
+.quote-author{font-size:.8rem;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+.quote-role{font-size:.77rem;color:rgba(255,255,255,.45);margin-top:5px}
 
-    .nav-inner{
-      padding-left:20px;
-      padding-right:20px;
-      gap:12px;
-    }
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--gold),#A67320);text-align:center}
+.cta-inner{max-width:760px;margin:auto}
+.cta-inner h2{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,3rem);color:#fff;margin-bottom:17px}
+.cta-inner p{font-size:.95rem;line-height:1.7;color:rgba(255,255,255,.85);margin-bottom:30px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-    .nav-logo{
-      min-width:0;
-      flex:1;
-    }
+/* CONTACT */
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:42px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:25px}
+.contact-item{display:flex;gap:15px;align-items:flex-start}
+.contact-item-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.2rem}
+.contact-item-label{font-size:.72rem;font-weight:700;color:var(--grey);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+.contact-item-value{font-size:.92rem;color:var(--navy);font-weight:600;word-break:break-word}
+.contact-item-value a{color:var(--navy);text-decoration:none}
+.contact-form{background:var(--off-white);border-radius:18px;padding:clamp(20px,4vw,38px)}
+.form-group{margin-bottom:18px}
+.form-label{display:block;font-size:.76rem;font-weight:700;color:var(--navy);letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+.form-input,.form-select,.form-textarea{width:100%;padding:13px 15px;border:1.5px solid var(--grey-light);border-radius:9px;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--text);background:#fff;outline:none;min-height:44px}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
+.form-textarea{resize:vertical;min-height:115px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-submit{width:100%;padding:15px;border:0;border-radius:9px;background:var(--gold);color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;text-transform:uppercase;cursor:pointer;min-height:48px}
+.form-submit:hover{background:var(--gold-light)}
+.form-submit:disabled{opacity:.7;cursor:wait}
+.form-status{font-size:.83rem;margin-top:12px;line-height:1.5}
 
-    .nav-logo-text{
-      font-size:1rem;
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:55px var(--container-pad) 30px}
+.footer-inner{max-width:1280px;margin:auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.footer-logo-text{font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;font-size:1.1rem}
+.footer-logo-text span{color:var(--gold)}
+.footer-tagline{font-size:.83rem;line-height:1.7;max-width:310px}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.06em;margin-bottom:17px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.82rem;color:rgba(255,255,255,.57);text-decoration:none}
+.footer-links a:hover,.footer-bottom a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;padding-top:25px}
+.footer-bottom p,.footer-bottom a{font-size:.73rem}
+.footer-bottom-links{display:flex;gap:16px;flex-wrap:wrap}
+.footer-bottom a{color:rgba(255,255,255,.43);text-decoration:none}
 
-    .hamburger{display:flex;flex-shrink:0}
-  }
+/* ANIMATIONS */
+@media(prefers-reduced-motion:no-preference){
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 
-  @media(max-width:600px){
-    .nav-inner{
-      height:64px;
-      padding-left:16px;
-      padding-right:16px;
-    }
-
-    .nav-logo-img{
-      width:32px;
-      height:32px;
-    }
-
-    .nav-logo-text{
-      font-size:.9rem;
-      letter-spacing:.03em;
-    }
-
-    .nav-logo-text span{
-      display:none;
-    }
-
-    .hamburger{
-      min-width:44px;
-      min-height:44px;
-    }
-
-    .mobile-menu{
-      top:64px;
-      max-height:calc(100dvh - 64px);
-      padding:8px 16px 24px;
-    }
-
-    .mobile-menu a{
-      font-size:.95rem;
-      padding:14px 4px;
-      line-height:1.35;
-    }
-  }
-  @media(max-width:768px){
-    .hero-actions{flex-direction:column;align-items:stretch}
-    .hero-actions a,.hero-actions button{width:100%}
-    .form-row{grid-template-columns:1fr}
-    .footer-top{grid-template-columns:1fr}
-    .footer-bottom{flex-direction:column;text-align:center;justify-content:center}
-    .footer-bottom-links{justify-content:center}
-    .ewdp-badge{right:0;top:-12px}
-  }
-  @media(max-width:480px){
-    .nav-inner{padding-left:16px;padding-right:16px}
-    .nav-logo-text{font-size:.95rem}
-    .nav-logo-img{width:32px;height:32px}
-    .mobile-menu{top:68px;max-height:calc(100vh - 68px)}
-    .savings-badge{right:20px;bottom:20px;left:20px;width:calc(100% - 40px)}
-    .cta-actions{flex-direction:column;align-items:stretch}
-    .cta-actions a{width:100%}
-  }
-
-  /* ─── ANIMATIONS ─────────────────────────────────── */
-  @media(prefers-reduced-motion:no-preference){
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-    .reveal.visible{opacity:1;transform:none}
-    .reveal-delay-1{transition-delay:.1s}
-    .reveal-delay-2{transition-delay:.2s}
-    .reveal-delay-3{transition-delay:.3s}
-  }
-  @media(prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none}
-  }
+/* RESPONSIVE */
+@media(max-width:1100px){
+.nav-links,nav>.nav-inner>.nav-cta{display:none}
+.hamburger{display:flex}
+.nav-inner{padding:0 20px}
+.hero{grid-template-columns:1fr}
+.hero-visual{display:none}
+.pillars-grid,.services-grid{grid-template-columns:repeat(2,1fr)}
+.btm-grid,.value-grid,.region-inner,.ewdp-grid{grid-template-columns:1fr}
+.us-banner,.residential-banner{grid-template-columns:1fr}
+.us-image{min-height:300px}
+.us-image:after{background:linear-gradient(0deg,var(--navy),transparent 55%)}
+.btm-image{height:350px}
+.value-image{height:350px}
+.region-image{height:350px}
+.footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+.hero-content{padding:65px 22px 45px}
+.hero h1{font-size:2.6rem}
+.hero-stats{gap:12px}
+.stat-value{font-size:1.35rem}
+.stat-label{font-size:.65rem}
+.pillars-grid,.services-grid,.vision-grid{grid-template-columns:1fr}
+.process-steps{grid-template-columns:1fr 1fr;row-gap:35px}
+.btm-points{grid-template-columns:1fr 1fr}
+.contact-grid{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr}
+.footer-bottom{flex-direction:column;text-align:center}
+.footer-bottom-links{justify-content:center}
+}
+@media(max-width:480px){
+.nav-inner{height:64px}
+.nav-logo-img{width:32px;height:32px}
+.nav-logo-text{font-size:.9rem}
+.nav-logo-text span{display:none}
+.mobile-menu{top:64px;max-height:calc(100dvh - 64px)}
+.hero h1{font-size:2.25rem}
+.hero-actions{flex-direction:column}
+.hero-actions a{width:100%}
+.hero-stats{grid-template-columns:1fr 1fr}
+.btm-points{grid-template-columns:1fr}
+.process-steps{grid-template-columns:1fr}
+.ewdp-small-grid{grid-template-columns:1fr 1fr}
+.cta-actions{flex-direction:column}
+.cta-actions a{width:100%}
+}
 </style>
 </head>
+
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-<img src="favicon.png" alt="Aethel Energy Logo" class="nav-logo-img" width="36" height="36">
+    <a href="#home" class="nav-logo">
+      <img src="favicon.png" alt="Aethel Energy Logo" class="nav-logo-img" width="36" height="36"/>
       <span class="nav-logo-text">AETHEL ENERGY<span> SOUTH AFRICA</span></span>
     </a>
+
     <ul class="nav-links">
-      <li><a href="#pillars">What We Do</a></li>
+      <li><a href="#pillars">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#savings">Why Us</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">EWDP Modelling Platform ↗</a></li>
-       <li><a href="https://ewdp.co.za/wheeling.html">What is Wheeling?</a></li>
-      <li><a href="https://store.ewdp.co.za">Store</a></li>
+      <li><a href="#btm">C&I BTM + BESS</a></li>
+      <li><a href="#international">USA Expansion</a></li>
+      <li><a href="#vision">Our Vision</a></li>
+      <li><a href="#residential">Residential</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+
     <a href="#contact" class="nav-cta">Talk to Us</a>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-controls="mobileMenu" aria-expanded="false">
+
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#pillars" onclick="closeMenu()">What We Do</a>
-  <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="#savings" onclick="closeMenu()">Why Us</a>
-  <a href="#process" onclick="closeMenu()">Process</a>
-  <a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">EWDP Modelling Platform ↗</a>
-  <a href="https://ewdp.co.za/wheeling.html" onclick="closeMenu()">What is Wheeling?</a>
-  <a href="https://store.ewdp.co.za" onclick="closeMenu()">Store</a>
+  <a href="#pillars" onclick="closeMenu()">About Aethel Energy</a>
+  <a href="#services" onclick="closeMenu()">Our Services</a>
+  <a href="#btm" onclick="closeMenu()">C&I BTM + BESS</a>
+  <a href="#international" onclick="closeMenu()">United States Expansion</a>
+  <a href="#vision" onclick="closeMenu()">IPP Strategy</a>
+  <a href="#residential" onclick="closeMenu()">Residential Energy</a>
+  <a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener">EWDP Modelling Platform ↗</a>
+  <a href="https://ewdp.co.za/wheeling.html">What is Wheeling?</a>
+  <a href="https://store.ewdp.co.za">Product Store</a>
   <a href="#contact" class="nav-cta" onclick="closeMenu()">Talk to Us</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <h1>Your Door to<br/><em>Clean,</em><br/>Cheaper Power.</h1>
-       <p class="hero-sub">Aethel Energy originates and facilitates clean energy deals for commercial and industrial businesses across South Africa — connecting you to the right wheeling or onsite solar PV and BESS opportunity. We bring the deal to your door. For homeowners, we also design and install residential solar and battery backup systems ourselves, from first quote to commissioning.</p> <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Get a Free Assessment</a>
-      <a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener" class="btn-outline">Model Your Savings on EWDP ↗</a>
+    <div class="hero-eyebrow">Energy Development · Power Generation · Storage</div>
+
+    <h1>Developing the Future of <em>Energy.</em></h1>
+
+    <p class="hero-sub">
+      Aethel Energy is an energy development company focused on the origination, development and advancement of renewable energy and storage opportunities. Our activities span commercial and industrial energy wheeling, behind-the-meter solar PV and BESS, residential energy solutions, and the development of international energy market opportunities.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Explore Our Services</a>
+      <a href="#vision" class="btn-outline">Our IPP Vision</a>
     </div>
+
     <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-value">2<span>+</span></div>
-        <div class="stat-label">Deal Structures Available</div>
+      <div>
+        <div class="stat-value">C&I<span> Energy</span></div>
+        <div class="stat-label">Wheeling & BTM Solutions</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-value">100<span>%</span></div>
-        <div class="stat-label">Certified Renewable Energy</div>
+      <div>
+        <div class="stat-value">BESS<span> + PV</span></div>
+        <div class="stat-label">Energy Generation & Storage</div>
       </div>
-      <div class="stat-item">
-        <div class="stat-value">PPA<span> / EPC</span></div>
-        <div class="stat-label">Flexible Structures (Cash, Finance, PPA)</div>
+      <div>
+        <div class="stat-value">USA<span> + SA</span></div>
+        <div class="stat-label">International Market Development</div>
       </div>
     </div>
   </div>
+
   <div class="hero-visual">
-    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&auto=format&fit=crop&q=80" alt="Solar panels at sunrise"/>
+    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&auto=format&fit=crop&q=80" alt="Utility-scale solar photovoltaic installation"/>
     <div class="hero-badge">
-      <div class="hero-badge-title">Real Access. <span>Real Savings.</span></div>
-      <div class="hero-badge-sub">Nationwide · South Africa</div>
+      <div class="hero-badge-title">Energy Development. <span>Without Borders.</span></div>
+      <div class="hero-badge-sub">South Africa · United States Market Development</div>
     </div>
   </div>
 </section>
 
-<!-- PILLARS -->
+<!-- ABOUT / PILLARS -->
 <section class="pillars" id="pillars">
   <div class="container">
-    <div class="section-label">One Partner. End-to-End.</div>
-    <h2 class="section-title">We Originate. We Facilitate.<br/>You <em>Decide</em>.</h2>
-    <p class="section-sub">Aethel Energy originates clean energy opportunities and facilitates the connection between your business and the right producer or EPC contractor. We bring the deal — you make the call.</p>
+    <div class="section-label">Who We Are</div>
+    <h2 class="section-title">An Energy Company with a <em>Long-Term Vision.</em></h2>
+    <p class="section-sub">
+      Aethel Energy is building a platform for participation across the energy value chain. We are developing commercial energy opportunities today while positioning the business for greater participation in power generation and energy storage over the long term.
+    </p>
+
     <div class="pillars-grid">
       <div class="pillar-card reveal">
         <div class="pillar-img">
-          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&auto=format&fit=crop&q=80" alt="Solar farm generating clean energy"/>
+          <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&auto=format&fit=crop&q=80" alt="Renewable energy generation"/>
         </div>
         <div class="pillar-body">
-          <div class="pillar-num">1</div>
-          <div class="pillar-title">We <em>Connect</em> You to Clean Energy.</div>
-          <p class="pillar-text">We originate wheeling (2MW–100MW+) and onsite solar PV and BESS (100kWp–2MW) opportunities nationwide, connecting your business with accredited producers and EPC contractors. We facilitate the process and remain involved through most boardroom meetings to conclusion.</p>
-          <div class="pillar-tag">Producer Access</div>
+          <div class="pillar-num">01</div>
+          <h3 class="pillar-title">Energy <em>Development.</em></h3>
+          <p class="pillar-text">
+            We originate and develop commercial and industrial energy opportunities, connecting businesses with renewable energy generation through wheeling PPAs and onsite energy solutions.
+          </p>
+          <span class="pillar-tag">Commercial & Industrial</span>
         </div>
       </div>
+
       <div class="pillar-card reveal reveal-delay-1">
         <div class="pillar-img">
-          <img src="https://images.unsplash.com/photo-1453847668862-487637052f8a?w=800&auto=format&fit=crop&q=80" alt="Power transmission lines at dusk"/>
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&auto=format&fit=crop&q=80" alt="Battery energy storage facility"/>
         </div>
         <div class="pillar-body">
-          <div class="pillar-num">2</div>
-          <div class="pillar-title">We <em>Facilitate</em> the Deal.</div>
-          <p class="pillar-text">We assess your energy needs, identify the right deal type — wheeling PPA, onsite PPA, or EPC — and introduce you to the relevant producer or EPC contractor. The agreement is between you and them.</p>
-          <div class="pillar-tag">Deal Facilitation</div>
+          <div class="pillar-num">02</div>
+          <h3 class="pillar-title">Power Generation <em>& Storage.</em></h3>
+          <p class="pillar-text">
+            We are positioning Aethel Energy for future participation in renewable power generation and battery energy storage, with the ambition of becoming an Independent Power Producer.
+          </p>
+          <span class="pillar-tag">IPP Development Strategy</span>
         </div>
       </div>
+
       <div class="pillar-card reveal reveal-delay-2">
         <div class="pillar-img">
-          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&auto=format&fit=crop&q=80" alt="Business partnership handshake"/>
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&auto=format&fit=crop&q=80" alt="International energy business development"/>
         </div>
         <div class="pillar-body">
-          <div class="pillar-num">3</div>
-          <div class="pillar-title">Clean Energy — <em>Live.</em></div>
-          <p class="pillar-text">Once the deal is concluded with the producer or EPC, clean energy flows. Lower costs, load-shedding resilience, and verified green credentials — origination done, value ongoing.</p>
-          <div class="pillar-tag">Sustainable Outcomes</div>
+          <div class="pillar-num">03</div>
+          <h3 class="pillar-title">International <em>Expansion.</em></h3>
+          <p class="pillar-text">
+            Our growth strategy extends beyond South Africa. We are expanding our business development activities into the United States, with a particular focus on virtual power purchase agreements and renewable energy markets.
+          </p>
+          <span class="pillar-tag">United States Market</span>
         </div>
       </div>
     </div>
@@ -695,112 +525,357 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
+<section id="services">
   <div class="container">
-    <div class="section-label">What We Offer</div>
-    <h2 class="section-title">Three Pathways.<br/>One <em>Origination</em> Partner.</h2>
+    <div class="section-label">Our Business Activities</div>
+    <h2 class="section-title">Energy Solutions Across <em>Multiple Markets.</em></h2>
+    <p class="section-sub">
+      Our service portfolio covers electricity procurement, onsite energy generation, battery storage and residential energy solutions.
+    </p>
+
     <div class="services-grid">
-          <!-- Solar PV + BESS Origination -->
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </div>
-        <div class="service-title">Solar PV + BESS Origination <span style="display:inline-block;background:var(--gold-pale);color:var(--gold);border-radius:50px;padding:2px 10px;font-size:.7rem;font-weight:700;letter-spacing:.04em;vertical-align:middle;margin-left:4px">100kWp – 2MW</span></div>
-        <p class="service-text">We originate and facilitate integrated onsite solar PV and Battery Energy Storage System (BESS) projects — available as a zero-capex PPA or a turnkey EPC deal for energy independence and load-shedding security.</p>
-      </div>
-      <!-- Wheeling Origination -->
+
       <div class="service-card reveal">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <div class="service-title">Wheeling Origination <span style="display:inline-block;background:var(--gold-pale);color:var(--gold);border-radius:50px;padding:2px 10px;font-size:.7rem;font-weight:700;letter-spacing:.04em;vertical-align:middle;margin-left:4px">2MW – 100MW+</span></div>
-        <p class="service-text">We originate wheeling opportunities, connecting your business to IPPs with existing grid capacity — facilitating the introduction so a PPA can be concluded directly between you and the producer.</p>
+        <h3 class="service-title">Energy Wheeling</h3>
+        <p class="service-text">
+          We originate and facilitate renewable energy wheeling opportunities, connecting large commercial and industrial electricity users with independent power producers through structured power purchase agreements.
+        </p>
+        <span class="capacity-tag">2 MW – 100 MW+</span>
       </div>
-           <!-- Residential Backup Storage + Solar (direct installation) -->
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>
+        </div>
+        <h3 class="service-title">C&I Behind-the-Meter Solar PV</h3>
+        <p class="service-text">
+          Onsite solar generation for commercial and industrial facilities, including rooftop, ground-mounted and other suitable behind-the-meter installations.
+        </p>
+        <span class="capacity-tag">100 kWp – 2 MW+ Opportunities</span>
+      </div>
+
       <div class="service-card reveal reveal-delay-2">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 7V4h10v3M12 11v6M9 14h6"/></svg>
         </div>
-        <div class="service-title">Residential Backup Storage + Solar <span style="display:inline-block;background:var(--gold-pale);color:var(--gold);border-radius:50px;padding:2px 10px;font-size:.7rem;font-weight:700;letter-spacing:.04em;vertical-align:middle;margin-left:4px">Installed by Us</span></div>
-        <p class="service-text">We supply and install home solar PV and battery backup systems ourselves, so one team looks after your system from design to commissioning. Keep your lights, Wi-Fi and essentials running through load-shedding and outages, while cutting your monthly electricity spend.</p>
+        <h3 class="service-title">Battery Energy Storage Systems</h3>
+        <p class="service-text">
+          BESS development and integration for commercial and industrial users, supporting energy optimisation, peak demand management, load shifting and power resilience.
+        </p>
+        <span class="capacity-tag">Commercial & Industrial BESS</span>
       </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+        <h3 class="service-title">Residential BTM + BESS</h3>
+        <p class="service-text">
+          Residential behind-the-meter battery storage and backup power solutions, with an initial product and installation offering scheduled for January 2027.
+        </p>
+        <span class="capacity-tag">January 2027 Launch</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h3 class="service-title">Virtual Power Purchase Agreements</h3>
+        <p class="service-text">
+          United States market development focused on VPPAs and the commercial structuring of renewable energy procurement opportunities between energy buyers and generators.
+        </p>
+        <span class="capacity-tag">United States Market Development</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 13v.01M9 17v.01"/></svg>
+        </div>
+        <h3 class="service-title">IPP & Energy Asset Development</h3>
+        <p class="service-text">
+          Long-term development strategy focused on building participation in renewable generation and energy storage assets serving wheeling and onsite electricity markets.
+        </p>
+        <span class="capacity-tag">Long-Term Strategic Development</span>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- VALUE / SAVINGS -->
+<!-- DEDICATED C&I BTM + BESS SECTION -->
+<section class="btm-section" id="btm">
+  <div class="container">
+    <div class="btm-grid">
+
+      <div class="reveal">
+        <div class="section-label">Commercial & Industrial Energy</div>
+        <h2 class="section-title">Powering Businesses <em>Behind the Meter.</em></h2>
+        <p class="section-sub">
+          Aethel Energy is expanding its commercial and industrial energy offering through behind-the-meter (BTM) solar PV and Battery Energy Storage Systems. We see onsite generation and storage as an important part of the future energy mix for South African businesses.
+        </p>
+
+        <p style="color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.8;margin-top:20px">
+          Our approach combines onsite renewable generation with intelligent energy storage to help facilities manage their electricity consumption, reduce exposure to peak tariffs, improve operational resilience and make better use of their available energy resources.
+        </p>
+
+        <div class="btm-points">
+          <div class="btm-point">
+            <strong>Peak Shaving</strong>
+            <span>Use stored energy to reduce electricity demand during expensive peak periods, subject to the applicable tariff structure.</span>
+          </div>
+          <div class="btm-point">
+            <strong>Load Shifting</strong>
+            <span>Store electricity when conditions are favourable and discharge it when the facility requires additional energy.</span>
+          </div>
+          <div class="btm-point">
+            <strong>Solar Optimisation</strong>
+            <span>Integrate solar generation and BESS to improve onsite energy utilisation and manage excess generation.</span>
+          </div>
+          <div class="btm-point">
+            <strong>Energy Resilience</strong>
+            <span>Support critical operations through appropriately designed storage and backup configurations.</span>
+          </div>
+        </div>
+
+        <p class="btm-note">
+          Project feasibility, savings and system configuration depend on site load profiles, tariff structures, connection conditions, equipment specifications and technical assessments.
+        </p>
+
+        <div style="margin-top:28px">
+          <a href="#contact" class="btn-primary">Discuss a C&I Project</a>
+        </div>
+      </div>
+
+      <div class="btm-image reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&auto=format&fit=crop&q=80" alt="Industrial energy infrastructure and electricity storage"/>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPOSITION -->
 <section class="value-section" id="savings">
-  <div class="value-inner">
-    <div class="value-content">
-      <div class="section-label">The Aethel Advantage</div>
-      <h2 class="section-title" style="color:#fff">Why Businesses <em style="color:#E8B84B">Work With Us</em></h2>
-      <p class="section-sub">We originate the right opportunity for your business — wheeling or onsite solar PV and BESS — and facilitate the introduction to the relevant party. You assess, you decide, you conclude.</p>
-      <div class="value-list">
-        <div class="value-item reveal">
-          <div class="value-check"><svg viewBox="0 0 14 14"><polyline points="2 7 6 11 12 3"/></svg></div>
-          <div class="value-text">
-            <strong>Flexible on Capital Expenditure</strong>
-            <span>PPA structures carry zero upfront cost — you pay only for energy consumed. EPC (onsite build) deals involve capex but give you asset ownership from day one. We originate both.</span>
-          </div>
-        </div>
-        <div class="value-item reveal reveal-delay-1">
-          <div class="value-check"><svg viewBox="0 0 14 14"><polyline points="2 7 6 11 12 3"/></svg></div>
-          <div class="value-text">
-            <strong>Guaranteed Below-Eskom Pricing</strong>
-            <span>The deals we originate and facilitate connect you to producers offering fixed below-Eskom tariff rates — for the full term of your agreement, concluded directly with them.</span>
-          </div>
-        </div>
-        <div class="value-item reveal reveal-delay-2">
-          <div class="value-check"><svg viewBox="0 0 14 14"><polyline points="2 7 6 11 12 3"/></svg></div>
-          <div class="value-text">
-            <strong>Load-Shedding Resilience</strong>
-            <span>Where producers include BESS capacity, your supply is buffered against grid outages — protecting revenue and production continuity.</span>
-          </div>
-        </div>
-        <div class="value-item reveal reveal-delay-3">
-          <div class="value-check"><svg viewBox="0 0 14 14"><polyline points="2 7 6 11 12 3"/></svg></div>
-          <div class="value-text">
-            <strong>Green Credentials, Properly Verified</strong>
-            <span>The deals we facilitate connect you to producers and EPCs whose output qualifies for renewable energy certificates and carbon reporting — meeting your ESG and B-BBEE requirements.</span>
-          </div>
-        </div>
+  <div class="container">
+    <div class="value-grid">
+      <div class="value-image reveal">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&auto=format&fit=crop&q=80" alt="Modern commercial business infrastructure"/>
       </div>
-    </div>
-    <div class="value-image">
-      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&auto=format&fit=crop&q=80" alt="Johannesburg city skyline at night"/>
-      <div class="savings-badge">
-        <div class="savings-amount">0<span style="font-size:1.2rem">R</span></div>
-        <div class="savings-label">Capex via PPA</div>
-        <div class="savings-sub">Wheeling &amp; onsite options</div>
+
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">The Aethel Approach</div>
+        <h2 class="section-title">Beyond Energy Procurement. <em>Building Energy Assets.</em></h2>
+        <p class="section-sub">
+          We believe the future of energy lies in combining generation, storage, intelligent procurement and commercial energy development.
+        </p>
+
+        <div class="value-list">
+          <div class="value-item">
+            <div class="value-check">✓</div>
+            <div class="value-text">
+              <strong>Multiple Energy Structures</strong>
+              <span>Wheeling PPAs, onsite generation, EPC projects and battery storage solutions to suit different commercial requirements.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-check">✓</div>
+            <div class="value-text">
+              <strong>Integrated Generation & Storage</strong>
+              <span>Combining solar PV and BESS to address energy costs, demand profiles and operational requirements.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-check">✓</div>
+            <div class="value-text">
+              <strong>Development-Led Strategy</strong>
+              <span>Building relationships, originating opportunities and advancing projects towards commercially viable agreements.</span>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-check">✓</div>
+            <div class="value-text">
+              <strong>Long-Term Asset Ownership Ambition</strong>
+              <span>Our strategic direction is to participate increasingly in the ownership and operation of renewable energy generation and storage assets.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- REGION -->
+<!-- UNITED STATES EXPANSION -->
+<section class="us-section" id="international">
+  <div class="container">
+    <div class="section-label">International Expansion</div>
+    <h2 class="section-title">Expanding Into the <em>United States.</em></h2>
+    <p class="section-sub" style="margin-bottom:35px">
+      Aethel Energy is developing its international market strategy, with the United States identified as a key expansion market. Our initial focus is on renewable energy commercialisation and Virtual Power Purchase Agreements.
+    </p>
+
+    <div class="us-banner">
+      <div class="us-content">
+        <div class="market-label">United States Market Development</div>
+        <h2 class="section-title">Connecting Renewable Energy <em>With Global Energy Buyers.</em></h2>
+        <p class="section-sub">
+          We are exploring opportunities within the US renewable energy market, particularly the development and facilitation of Virtual Power Purchase Agreements.
+        </p>
+
+        <div class="us-points">
+          <div class="us-point">
+            <div class="us-point-icon">✓</div>
+            <div>
+              <strong>Virtual Power Purchase Agreements (VPPAs)</strong>
+              <span>Development and commercial facilitation of virtual renewable energy procurement arrangements between corporate energy buyers and renewable generators.</span>
+            </div>
+          </div>
+
+          <div class="us-point">
+            <div class="us-point-icon">✓</div>
+            <div>
+              <strong>Renewable Energy Project Development</strong>
+              <span>Exploring relationships with renewable energy developers, generators, energy buyers and relevant market participants.</span>
+            </div>
+          </div>
+
+          <div class="us-point">
+            <div class="us-point-icon">✓</div>
+            <div>
+              <strong>Corporate Energy Procurement</strong>
+              <span>Identifying opportunities to support corporate renewable energy procurement, sustainability objectives and long-term energy strategies.</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:.77rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:23px">
+          Our US activities are in market-development and expansion stages. Transactions will be pursued with appropriate counterparties and in accordance with applicable US market, contractual and regulatory requirements.
+        </p>
+
+        <a href="#contact" class="btn-primary">International Partnerships</a>
+      </div>
+
+      <div class="us-image">
+        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1000&auto=format&fit=crop&q=80" alt="United States city skyline representing international expansion"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IPP STRATEGY -->
+<section class="vision-section" id="vision">
+  <div class="container">
+    <div class="vision-heading">
+      <div class="section-label">Our Long-Term Direction</div>
+      <h2 class="section-title">Our Vision: Becoming an <em>Independent Power Producer.</em></h2>
+      <p class="section-sub">
+        We envision Aethel Energy evolving beyond energy origination and project facilitation into an Independent Power Producer with participation in renewable electricity generation and energy storage assets.
+      </p>
+    </div>
+
+    <div class="vision-grid">
+      <div class="vision-card reveal">
+        <div class="vision-number">01</div>
+        <h3>Wheeling Generation Assets</h3>
+        <p>
+          Developing and ultimately owning or participating in renewable energy generation assets supplying commercial and industrial electricity consumers through structured wheeling arrangements and long-term PPAs.
+        </p>
+      </div>
+
+      <div class="vision-card reveal reveal-delay-1">
+        <div class="vision-number">02</div>
+        <h3>Behind-the-Meter Generation</h3>
+        <p>
+          Developing onsite solar PV and BESS projects for commercial and industrial consumers, with a longer-term ambition to own, operate or finance energy assets serving facilities directly.
+        </p>
+      </div>
+
+      <div class="vision-card reveal reveal-delay-2">
+        <div class="vision-number">03</div>
+        <h3>Integrated Energy Portfolio</h3>
+        <p>
+          Building a portfolio that combines renewable generation, battery energy storage, electricity procurement and commercial energy solutions across multiple markets.
+        </p>
+      </div>
+    </div>
+
+    <p class="vision-footnote">
+      This represents Aethel Energy's long-term corporate strategy and development ambition. Individual projects will be pursued subject to project finance, investment partnerships, applicable licences, regulatory approvals, grid access and commercial feasibility.
+    </p>
+  </div>
+</section>
+
+<!-- RESIDENTIAL LAUNCH -->
+<section class="residential" id="residential">
+  <div class="container">
+    <div class="residential-banner">
+
+      <div>
+        <div class="launch-badge">Residential Energy · January 2027</div>
+
+        <h2>Bringing Energy <em>Independence</em> Closer to Home.</h2>
+
+        <p>
+          Aethel Energy is preparing to expand into the residential behind-the-meter market with battery energy storage and backup power solutions.
+        </p>
+
+        <p style="margin-top:15px">
+          Our residential offering will focus on practical BESS solutions designed to help homeowners maintain essential electricity supply, improve energy resilience and make greater use of available electricity.
+        </p>
+
+        <div class="launch-features">
+          <span>Battery Energy Storage</span>
+          <span>Backup Power</span>
+          <span>Hybrid Inverters</span>
+          <span>Solar Integration</span>
+          <span>Residential BTM</span>
+        </div>
+
+        <a href="#contact" class="btn-white">Register Your Interest</a>
+      </div>
+
+      <div class="residential-visual">
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&auto=format&fit=crop&q=80" alt="Modern residential property"/>
+        <p style="font-size:.72rem;color:rgba(255,255,255,.48);margin-top:12px;text-align:right">
+          Residential BTM BESS product and service launch · January 2027
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOUTH AFRICAN FOOTPRINT -->
 <section class="region" id="region">
   <div class="container">
     <div class="region-inner">
       <div class="region-image reveal">
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="South African industrial landscape and Gauteng highveld"/>
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&auto=format&fit=crop&q=80" alt="South African industrial and energy landscape"/>
       </div>
+
       <div class="reveal reveal-delay-1">
-        <div class="section-label">Where We Originate</div>
-        <h2 class="section-title">Originating Deals <em>Across South Africa</em></h2>
-        <p class="section-sub">We originate wheeling and onsite solar PV and BESS opportunities for commercial and industrial businesses nationwide — from Gauteng's industrial corridor to the Western Cape, KwaZulu-Natal, and beyond.</p>
+        <div class="section-label">Our Home Market</div>
+        <h2 class="section-title">Developing Energy Opportunities <em>Across South Africa.</em></h2>
+        <p class="section-sub">
+          South Africa remains a core market for Aethel Energy. Our commercial and industrial activities target large energy users and businesses seeking alternative electricity procurement, onsite generation and storage solutions.
+        </p>
+
         <div class="region-tags">
-          <span class="region-tag"> Gauteng</span>
-          <span class="region-tag"> Western Cape</span>
-          <span class="region-tag"> North-West</span>
-          <span class="region-tag"> Free State</span>
-          <span class="region-tag"> KwaZulu-Natal</span>
-          <span class="region-tag"> Eastern Cape</span>
-          <span class="region-tag"> Northern Cape</span>
-          <span class="region-tag"> Limpopo</span>
-          <span class="region-tag"> Mpumalanga</span>
+          <span class="region-tag">Gauteng</span>
+          <span class="region-tag">Western Cape</span>
+          <span class="region-tag">North-West</span>
+          <span class="region-tag">Free State</span>
+          <span class="region-tag">KwaZulu-Natal</span>
+          <span class="region-tag">Eastern Cape</span>
+          <span class="region-tag">Northern Cape</span>
+          <span class="region-tag">Limpopo</span>
+          <span class="region-tag">Mpumalanga</span>
         </div>
-        <div style="margin-top:36px">
-          <a href="#contact" class="btn-primary">Check My Area</a>
+
+        <div style="margin-top:30px">
+          <a href="#contact" class="btn-primary">Discuss a Project</a>
         </div>
       </div>
     </div>
@@ -808,97 +883,102 @@
 </section>
 
 <!-- PROCESS -->
-<section class="process" id="process">
+<section id="process">
   <div class="container">
     <div style="text-align:center">
-      <div class="section-label">How It Works</div>
-      <h2 class="section-title">Simple. <em>Timely.</em> Profitable.</h2>
-      <p class="section-sub" style="margin:16px auto 0">Getting onto clean, cheaper energy takes four straightforward steps — typically 6–12 weeks for On-site Solar PV from first call to first delivery. Energy wheeling is dependant on negotiations up to financial close.</p>
+      <div class="section-label">Our Development Approach</div>
+      <h2 class="section-title">From Opportunity to <em>Energy Project.</em></h2>
+      <p class="section-sub" style="margin:16px auto 0">
+        We follow a structured development approach to assess, originate and advance energy opportunities towards implementation.
+      </p>
     </div>
+
     <div class="process-steps">
       <div class="step reveal">
         <div class="step-circle">01</div>
-        <div class="step-title">Initial Conversation</div>
-        <p class="step-text">We learn about your site, consumption profile, and goals — understanding whether wheeling, onsite PPA, or an EPC deal is the right fit. No cost, no commitment.</p>
+        <h3 class="step-title">Opportunity Identification</h3>
+        <p class="step-text">Identify energy requirements, project opportunities, suitable sites and commercial objectives.</p>
       </div>
+
       <div class="step reveal reveal-delay-1">
         <div class="step-circle">02</div>
-        <div class="step-title">Opportunity Match</div>
-        <p class="step-text">We identify the right deal and connect you with the relevant producer or EPC contractor, whether wheeling, onsite PPA, or EPC. We facilitate the process and remain involved in most boardroom meetings through to conclusion.</p>
+        <h3 class="step-title">Technical & Commercial Assessment</h3>
+        <p class="step-text">Evaluate consumption, capacity, tariffs, project economics and the most suitable transaction structure.</p>
       </div>
+
       <div class="step reveal reveal-delay-2">
         <div class="step-circle">03</div>
-        <div class="step-title">Agreement Concluded</div>
-        <p class="step-text">You engage directly with the producer or EPC contractor and us throughout the process. We originate, facilitate and coordinate the opportunity through to the final agreement.</p>
+        <h3 class="step-title">Project Structuring</h3>
+        <p class="step-text">Coordinate relevant producers, EPC contractors, investors, counterparties and other project participants.</p>
       </div>
+
       <div class="step reveal reveal-delay-3">
         <div class="step-circle">04</div>
-        <div class="step-title">Clean Energy Live</div>
-        <p class="step-text">Clean energy flows to your facility via wheeling or your onsite system. The producer or EPC manages delivery — you enjoy lower costs and verified green credentials.</p>
+        <h3 class="step-title">Project Advancement</h3>
+        <p class="step-text">Advance suitable opportunities through commercial negotiations, agreements, financing and implementation.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EWDP -->
+<!-- EWDP PLATFORM -->
 <section style="background:#fff" id="ewdp">
   <div class="container">
     <div class="ewdp-grid">
+
       <div class="reveal">
-        <div class="section-label">Built by Aethel Energy</div>
-        <h2 class="section-title">We Also Built<br/>the <em>Industry's Tool.</em></h2>
-        <p class="section-sub">The Energy Wheeling Development Platform (EWDP) is a savings modelling platform we built for commercial and industrial businesses across South Africa. Run your own numbers — no contact required.</p>
-        <ul style="margin-top:28px;display:flex;flex-direction:column;gap:14px;list-style:none">
-          <li style="display:flex;gap:12px;align-items:flex-start">
-            <span style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--gold-pale);border:1px solid rgba(200,146,42,.4);display:flex;align-items:center;justify-content:center;margin-top:2px">
-              <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><polyline points="2 7 6 11 12 3" stroke="#C8922A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span style="font-size:.9rem;color:var(--grey);line-height:1.6"><strong style="color:var(--navy);font-family:'Montserrat',sans-serif;font-size:.9rem">Model wheeling savings</strong> based on your actual consumption and location</span>
+        <div class="section-label">Technology & Development</div>
+        <h2 class="section-title">We Built the <em>Energy Wheeling Development Platform.</em></h2>
+        <p class="section-sub">
+          The Energy Wheeling Development Platform (EWDP) is a modelling platform developed by Aethel Energy to help South African commercial and industrial electricity users explore the potential economics of energy wheeling.
+        </p>
+
+        <ul style="margin-top:25px;display:flex;flex-direction:column;gap:14px;list-style:none">
+          <li style="font-size:.88rem;color:var(--grey);line-height:1.7">
+            ✓ Model potential wheeling savings using consumption and location inputs.
           </li>
-          <li style="display:flex;gap:12px;align-items:flex-start">
-            <span style="flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--gold-pale);border:1px solid rgba(200,146,42,.4);display:flex;align-items:center;justify-content:center;margin-top:2px">
-              <svg width="11" height="11" viewBox="0 0 14 14" fill="none"><polyline points="2 7 6 11 12 3" stroke="#C8922A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span style="font-size:.9rem;color:var(--grey);line-height:1.6"><strong style="color:var(--navy);font-family:'Montserrat',sans-serif;font-size:.9rem">Self-serve, no gatekeeping</strong> — the model runs on your inputs, instantly</span>
+          <li style="font-size:.88rem;color:var(--grey);line-height:1.7">
+            ✓ Explore alternative energy procurement scenarios.
+          </li>
+          <li style="font-size:.88rem;color:var(--grey);line-height:1.7">
+            ✓ Access a self-service modelling experience without requiring an initial consultation.
           </li>
         </ul>
-        <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center">
-          <a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener" class="btn-primary">Go to EWDP ↗</a>
-          <span style="font-size:.8rem;color:var(--grey);line-height:1.4">Energy Wheeling Development Platform — built by Aethel Energy. Disclaimer: modeled figures are purely for demonstrative purposes only and do not constitute an official proposal.</span>
+
+        <div style="margin-top:30px">
+          <a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener" class="btn-primary">Access EWDP ↗</a>
         </div>
+
+        <p style="font-size:.73rem;color:var(--grey);line-height:1.6;margin-top:15px">
+          Modelled results are indicative only and do not constitute a binding energy proposal, tariff quotation or guaranteed saving.
+        </p>
       </div>
-      <div class="reveal reveal-delay-1 ewdp-card-wrapper">
-        <div style="background:var(--navy);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);padding:clamp(20px, 4vw, 32px)">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
-            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57"></div>
-            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e"></div>
-            <div style="width:10px;height:10px;border-radius:50%;background:#28c840"></div>
-            <span style="margin-left:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.75rem;color:rgba(255,255,255,.4);letter-spacing:.06em">ewdp.co.za/ewdp.html</span>
+
+      <div class="ewdp-preview reveal reveal-delay-1">
+        <div class="ewdp-preview-title">EWDP · Illustrative Modelling Interface</div>
+
+        <div class="ewdp-metric">
+          <div class="ewdp-metric-label">Illustrative Monthly Energy Spend</div>
+          <div class="ewdp-metric-value">R 480,000</div>
+        </div>
+
+        <div class="ewdp-small-grid">
+          <div class="ewdp-metric">
+            <div class="ewdp-metric-label">Deal Type</div>
+            <div class="ewdp-metric-value">Wheeling PPA</div>
           </div>
-          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;margin-bottom:16px">
-            <div style="font-size:.7rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px">Monthly Energy Spend</div>
-            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;color:#fff">R 480,000</div>
-            <div style="height:4px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:12px">
-              <div style="height:4px;width:72%;background:var(--gold);border-radius:2px"></div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));gap:12px;margin-bottom:16px">
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px">
-              <div style="font-size:.7rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Deal Type</div>
-              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:#fff">Wheeling PPA</div>
-            </div>
-            <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px">
-              <div style="font-size:.7rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Capacity</div>
-              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;color:#fff">2.2 MW</div>
-            </div>
-          </div>
-          <div style="background:rgba(200,146,42,.15);border:1px solid rgba(200,146,42,.3);border-radius:12px;padding:16px;text-align:center">
-            <div style="font-size:.7rem;font-weight:600;color:var(--gold-light);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px">Projected Year 1 Saving</div>
-            <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(1.5rem, 3vw, 2rem);color:var(--gold-light)">R 1,320,000</div>
+          <div class="ewdp-metric">
+            <div class="ewdp-metric-label">Capacity</div>
+            <div class="ewdp-metric-value">2.2 MW</div>
           </div>
         </div>
-        <div class="ewdp-badge">Built by Aethel Energy</div>
+
+        <div class="ewdp-metric" style="border-color:rgba(200,146,42,.4);background:rgba(200,146,42,.12)">
+          <div class="ewdp-metric-label">Illustrative Year 1 Saving</div>
+          <div class="ewdp-metric-value" style="color:var(--gold-light)">R 1,320,000</div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -907,19 +987,23 @@
 <section class="testimonial">
   <div class="testimonial-inner">
     <div class="quote-icon">"</div>
-    <p class="quote-text">Aethel Energy brought the opportunity to us, introduced us to the right party, and we took it from there. Straightforward, no pressure — the deal made sense on its own merits.</p>
-    <div class="quote-author">Financial Director, Vaal Manufacturing Group</div>
-    <div class="quote-role">Commercial client since 2025</div>
+    <p class="quote-text">
+      Developing the energy solutions of tomorrow requires more than simply supplying electricity. It requires the right partnerships, commercially viable projects and a long-term commitment to building energy infrastructure.
+    </p>
+    <div class="quote-author">Aethel Energy</div>
+    <div class="quote-role">Our approach to energy development</div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <div class="cta-inner">
-    <h2>Ready to Cut Your Energy Bill — Permanently?</h2>
-    <p>A free conversation reveals which deal structure fits your business — wheeling, onsite solar PV, or BESS — and connects you to the right opportunity. No commitment required.</p>
+    <h2>Let's Develop the Next Energy Opportunity.</h2>
+    <p>
+      Whether you are a commercial energy user, project developer, renewable energy producer, investor or prospective international partner, Aethel Energy welcomes discussions around commercially viable energy opportunities.
+    </p>
     <div class="cta-actions">
-      <a href="#contact" class="btn-white">Talk to Aethel Energy</a>
+      <a href="#contact" class="btn-white">Engage With Aethel Energy</a>
       <a href="tel:0672882659" class="btn-ghost-white">Call 067 288 2659</a>
     </div>
   </div>
@@ -929,217 +1013,295 @@
 <section class="contact" id="contact">
   <div class="container">
     <div class="section-label">Get In Touch</div>
-    <h2 class="section-title">Let's Talk <em>Clean Energy</em></h2>
+    <h2 class="section-title">Let's Talk <em>Energy.</em></h2>
+
     <div class="contact-grid">
+
       <div class="contact-info reveal">
-        <p style="font-size:1rem;color:var(--grey);line-height:1.7;margin-bottom:8px">Whether you're a business looking to cut energy costs, or a partner ready to refer clients — we'd love to connect.</p>
+        <p style="font-size:.95rem;color:var(--grey);line-height:1.8;margin-bottom:5px">
+          We welcome enquiries from businesses, electricity users, renewable energy developers, EPC contractors, investors and prospective international partners.
+        </p>
+
         <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.13 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012.17 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
+          <div class="contact-item-icon">☎</div>
           <div>
-            <div class="contact-item-label">Phone</div>
-            <div class="contact-item-value">067 288 2659</div>
+            <div class="contact-item-label">Telephone</div>
+            <div class="contact-item-value"><a href="tel:0672882659">067 288 2659</a></div>
           </div>
         </div>
+
         <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
+          <div class="contact-item-icon">✉</div>
           <div>
             <div class="contact-item-label">Email</div>
-            <div class="contact-item-value">elvin@ewdp.co.za</div>
+            <div class="contact-item-value"><a href="mailto:elvin@ewdp.co.za">elvin@ewdp.co.za</a></div>
           </div>
         </div>
+
         <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-          </div>
+          <div class="contact-item-icon">◎</div>
           <div>
             <div class="contact-item-label">Website</div>
-            <div class="contact-item-value">www.ewdp.co.za</div>
+            <div class="contact-item-value"><a href="https://www.ewdp.co.za">www.ewdp.co.za</a></div>
           </div>
         </div>
+
         <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
+          <div class="contact-item-icon">⌖</div>
           <div>
-            <div class="contact-item-label">Region</div>
-            <div class="contact-item-value">Nationwide, South Africa</div>
+            <div class="contact-item-label">Primary Market</div>
+            <div class="contact-item-value">South Africa</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">🌎</div>
+          <div>
+            <div class="contact-item-label">International Development</div>
+            <div class="contact-item-value">United States of America</div>
           </div>
         </div>
       </div>
+
       <div class="contact-form reveal reveal-delay-1">
         <div style="margin-bottom:24px">
-          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:6px">Request a Free Assessment</h3>
-          <p style="font-size:.85rem;color:var(--grey)">We'll get back to you within one business day.</p>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:7px">Submit an Enquiry</h3>
+          <p style="font-size:.83rem;color:var(--grey)">Tell us about your energy requirements or proposed partnership.</p>
         </div>
-        <form onsubmit="handleSubmit(event)">
-          <!-- FormSubmit Options -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New Clean Energy Enquiry — Aethel Energy">
-          <input type="hidden" name="_template" value="table">
+
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_captcha" value="false"/>
+          <input type="hidden" name="_subject" value="New Energy Enquiry - Aethel Energy"/>
+          <input type="hidden" name="_template" value="table"/>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">First Name</label>
-              <input type="text" name="First Name" class="form-input" placeholder="Sipho" required/>
+              <label class="form-label" for="firstName">First Name</label>
+              <input id="firstName" type="text" name="First Name" class="form-input" placeholder="First name" required/>
             </div>
             <div class="form-group">
-              <label class="form-label">Last Name</label>
-              <input type="text" name="Last Name" class="form-input" placeholder="Dlamini" required/>
+              <label class="form-label" for="lastName">Last Name</label>
+              <input id="lastName" type="text" name="Last Name" class="form-input" placeholder="Last name" required/>
             </div>
           </div>
+
           <div class="form-group">
-            <label class="form-label">Business Email</label>
-            <input type="email" name="Email" class="form-input" placeholder="sipho@yourcompany.co.za" required/>
+            <label class="form-label" for="email">Email Address</label>
+            <input id="email" type="email" name="Email" class="form-input" placeholder="name@company.com" required/>
           </div>
+
           <div class="form-group">
-            <label class="form-label">Company Name</label>
-            <input type="text" name="Company" class="form-input" placeholder="Your Company (Pty) Ltd"/>
+            <label class="form-label" for="company">Company / Organisation</label>
+            <input id="company" type="text" name="Company" class="form-input" placeholder="Company name"/>
           </div>
+
           <div class="form-group">
-            <label class="form-label">I'm Interested In</label>
-            <select name="Interest" class="form-select">
-              <option value="">Select an option…</option>
-              <option value="General Information">General information</option>
-              <option value="Wheeling Origination">Energy wheeling enquiry</option>
-              <option value="Commercial Solar PV + BESS">Onsite solar PV + BESS</option>
-              <option value="Commercial Solar PV Only">Onsite solar PV only</option> 
-              <option value="Residential Solar + Backup Installation">Home solar + battery backup installation</option>
+            <label class="form-label" for="market">Market</label>
+            <select id="market" name="Market" class="form-select">
+              <option value="">Select a market</option>
+              <option value="South Africa">South Africa</option>
+              <option value="United States">United States</option>
+              <option value="Other International Market">Other international market</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label class="form-label">Message (Optional)</label>
-            <textarea name="Message" class="form-textarea" placeholder="Tell us about your current energy setup or monthly spend…"></textarea>
+            <label class="form-label" for="interest">Area of Interest</label>
+            <select id="interest" name="Interest" class="form-select" required>
+              <option value="">Select an option</option>
+              <option value="Energy Wheeling">Energy wheeling</option>
+              <option value="C&I Behind-the-Meter Solar PV">C&I behind-the-meter solar PV</option>
+              <option value="C&I Battery Energy Storage Systems">C&I BESS</option>
+              <option value="C&I Solar PV + BESS">C&I Solar PV + BESS</option>
+              <option value="United States VPPAs">US VPPAs</option>
+              <option value="Renewable Energy Project Development">Renewable energy project development</option>
+              <option value="IPP Investment or Partnership">IPP investment or partnership</option>
+              <option value="Residential BTM BESS - January 2027">Residential BTM BESS</option>
+              <option value="EPC or Technical Partnership">EPC or technical partnership</option>
+              <option value="General Business Enquiry">General enquiry</option>
+            </select>
           </div>
-          <button type="submit" class="form-submit">Send My Request →</button>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="Message" class="form-textarea" placeholder="Tell us about your project, requirements or proposed partnership..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Submit Enquiry →</button>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>
+
     </div>
   </div>
 </section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand">
+
+      <div>
         <div class="footer-logo">
-          <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
             <circle cx="18" cy="18" r="18" fill="#C8922A" opacity=".10"/>
-            <path d="M18 5 L30 31 H25 L21.5 23 H14.5 L11 31 H6 Z" fill="#0A1628"/>
-            <rect x="13" y="19" width="10" height="3.5" fill="#0A1628"/>
+            <path d="M18 5 L30 31 H25 L21.5 23 H14.5 L11 31 H6 Z" fill="#fff"/>
+            <rect x="13" y="19" width="10" height="3.5" fill="#fff"/>
             <polygon points="22,15 15,22 18.5,22 14,29 23,19.5 19,19.5 24.5,15" fill="#C8922A"/>
           </svg>
           <span class="footer-logo-text">AETHEL <span>ENERGY</span></span>
         </div>
-        <p class="footer-tagline">Clean energy origination across South Africa. We facilitate wheeling and onsite solar PV and BESS deals — connecting businesses to the right producer or EPC contractor nationwide.</p>
-          </div>
+
+        <p class="footer-tagline">
+          An energy development company focused on renewable energy origination, power generation, battery storage and commercial energy solutions across South Africa and international markets.
+        </p>
+      </div>
+
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Our Services</h4>
         <ul class="footer-links">
-          <li><a href="#services">Wheeling Origination</a></li>
-          <li><a href="#services">Onsite Solar PV + BESS</a></li>
-          <li><a href="#services">Deal Origination Nationwide</a></li>
-          <li><a href="#services">Home Solar + Backup Installation</a></li>
+          <li><a href="#services">Energy Wheeling</a></li>
+          <li><a href="#btm">C&I BTM + BESS</a></li>
+          <li><a href="#services">Solar PV</a></li>
+          <li><a href="#services">Battery Storage</a></li>
+          <li><a href="#residential">Residential Energy</a></li>
+          <li><a href="#international">US VPPAs</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h4>Company</h4>
         <ul class="footer-links">
-          <li><a href="#pillars">What We Do</a></li>
-          <li><a href="#region">Our Region</a></li>
-          <li><a href="#process">Our Process</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-             <li><a href="https://store.ewdp.co.za">Store</a></li>
-          <li><a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener">EWDP Modelling Platform ↗</a></li>
+          <li><a href="#pillars">About Aethel</a></li>
+          <li><a href="#vision">IPP Strategy</a></li>
+          <li><a href="#international">International Expansion</a></li>
+          <li><a href="#region">Our Markets</a></li>
+          <li><a href="#process">Development Approach</a></li>
+          <li><a href="https://ewdp.co.za/ewdp.html" target="_blank" rel="noopener">EWDP Platform ↗</a></li>
+          <li><a href="https://store.ewdp.co.za">Product Store</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h4>Contact</h4>
         <ul class="footer-links">
           <li><a href="tel:0672882659">067 288 2659</a></li>
           <li><a href="mailto:elvin@ewdp.co.za">elvin@ewdp.co.za</a></li>
-          <li><a href="https://www.ewdp.co.za" target="_blank" rel="noopener">www.ewdp.co.za</a></li>
-          <li style="color:rgba(255,255,255,.4);font-size:.85rem;margin-top:8px">Nationwide<br/>South Africa</li>
+          <li><a href="https://www.ewdp.co.za">www.ewdp.co.za</a></li>
+          <li style="font-size:.82rem;color:rgba(255,255,255,.4);margin-top:8px">South Africa<br/>International Market Development</li>
         </ul>
       </div>
+
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 Aethelwine Homes (Pty) Ltd t/a Aethel Energy South Africa. All rights reserved.</p>
+      <p>© <span id="currentYear">2026</span> Aethelwine Homes (Pty) Ltd t/a Aethel Energy South Africa. All rights reserved.</p>
+
       <div class="footer-bottom-links">
-        <a href="https://firebasestorage.googleapis.com/v0/b/eidp-c576e.firebasestorage.app/o/Terms%20and%20Privacy%20Policy%20Aethel%20Energy%2FAethel_Energy_Privacy_Policy.pdf?alt=media&token=3a30c107-6e0c-45c3-80da-d762a81917e5">Privacy Policy</a>
-        <a href="https://firebasestorage.googleapis.com/v0/b/eidp-c576e.firebasestorage.app/o/Terms%20and%20Privacy%20Policy%20Aethel%20Energy%2FAethel_Energy_Terms_of_Service_Updated.pdf?alt=media&token=b00b8a11-d632-4e69-81c0-09b20c0e9e45">Terms of Service</a>
-        <a href="https://firebasestorage.googleapis.com/v0/b/eidp-c576e.firebasestorage.app/o/Terms%20and%20Privacy%20Policy%20Aethel%20Energy%2FAethel_Energy_PAIA_Manual.pdf?alt=media&token=67fb9738-0261-47a0-a334-79e2b5b8a2cd">PAIA Manual</a>
+        <a href="https://firebasestorage.googleapis.com/v0/b/eidp-c576e.firebasestorage.app/o/Terms%20and%20Privacy%20Policy%20Aethel%20Energy%2FAethel_Energy_Privacy_Policy.pdf?alt=media&token=3a30c107-6e0c-45c3-80da-d762a81917e5" target="_blank" rel="noopener">Privacy Policy</a>
+
+        <a href="https://firebasestorage.googleapis.com/v0/b/eidp-c576e.firebasestorage.app/o/Terms%20and%20Privacy%20Policy%20Aethel%20Energy%2FAethel_Energy_Terms_of_Service_Updated.pdf?alt=media&token=b00b8a11-d632-4e69-81c0-09b20c0e9e45" target="_blank" rel="noopener">Terms of Service</a>
+
+        <a href="https://firebasestorage.googleapis.com/v0/b/eidp-c576e.firebasestorage.app/o/Terms%20and%20Privacy%20Policy%20Aethel%20Energy%2FAethel_Energy_PAIA_Manual.pdf?alt=media&token=67fb9738-0261-47a0-a334-79e2b5b8a2cd" target="_blank" rel="noopener">PAIA Manual</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Nav scroll effect
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-  });
+// NAVIGATION SCROLL EFFECT
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
+});
 
-  // Mobile menu
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    const button = document.querySelector('.hamburger');
-    const isOpen = menu.classList.toggle('open');
-    button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+// MOBILE NAVIGATION
+function toggleMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const button=document.querySelector('.hamburger');
+  const isOpen=menu.classList.toggle('open');
+  button.setAttribute('aria-expanded',isOpen?'true':'false');
+}
+
+function closeMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const button=document.querySelector('.hamburger');
+  menu.classList.remove('open');
+  button.setAttribute('aria-expanded','false');
+}
+
+// CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+document.addEventListener('click',(e)=>{
+  const menu=document.getElementById('mobileMenu');
+  const button=document.querySelector('.hamburger');
+  if(menu.classList.contains('open')&&!menu.contains(e.target)&&!button.contains(e.target)){
+    closeMenu();
   }
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-    const button = document.querySelector('.hamburger');
-    if (button) button.setAttribute('aria-expanded', 'false');
-  }
+});
 
-  // Scroll reveal
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
- // Form submit (AJAX handling for FormSubmit)
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/elvin@ewdp.co.za/ewdp.html', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        btn.textContent = '✓ Request Sent!';
-        btn.style.background = '#2D7D46';
-        form.reset();
-      } else {
-        btn.textContent = 'Error, try again';
-        btn.style.background = '#C83232';
+// SCROLL REVEAL
+if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
-    } catch (err) {
-      btn.textContent = 'Error, try again';
-      btn.style.background = '#C83232';
-    }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
 
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 4000);
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+}
+
+// CURRENT COPYRIGHT YEAR
+document.getElementById('currentYear').textContent=new Date().getFullYear();
+
+// CONTACT FORM
+async function handleSubmit(e){
+  e.preventDefault();
+
+  const form=e.target;
+  const btn=form.querySelector('button[type="submit"]');
+  const status=document.getElementById('formStatus');
+  const originalText=btn.textContent;
+
+  btn.disabled=true;
+  btn.textContent='Sending...';
+  status.textContent='';
+
+  try{
+    const response=await fetch('https://formsubmit.co/ajax/elvin@ewdp.co.za',{
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+
+    const result=await response.json();
+
+    if(response.ok && (result.success==='true'||result.success===true)){
+      btn.textContent='✓ Enquiry Submitted';
+      btn.style.background='#2D7D46';
+      status.style.color='#2D7D46';
+      status.textContent='Thank you. Your enquiry has been submitted successfully.';
+      form.reset();
+    }else{
+      throw new Error('Form submission failed');
+    }
+  }catch(error){
+    btn.textContent='Unable to Submit';
+    btn.style.background='#C83232';
+    status.style.color='#C83232';
+    status.textContent='Your enquiry could not be submitted. Please email elvin@ewdp.co.za directly.';
   }
+
+  setTimeout(()=>{
+    btn.textContent=originalText;
+    btn.style.background='';
+    btn.disabled=false;
+  },5000);
+}
 </script>
+
 </body>
 </html>
